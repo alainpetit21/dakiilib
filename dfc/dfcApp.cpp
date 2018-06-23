@@ -109,7 +109,7 @@ CApp::Init(u32 p_nbContext)
 #if defined(_WIN32DX7) || defined(_WIN32OPENGL)
 	QueryPerformanceCounter((LARGE_INTEGER*)&m_thisFrameTick);
 #elif defined(_LINUX)
-	m_thisFrameTick= SDL_GetTicks();
+//TODO	m_thisFrameTick= SDL_GetTicks();
 #elif defined(_GP2X)
 	m_thisFrameTick= gRegIO[0x0C04>>1]*1000;
 	m_thisFrameTick+= (gRegIO[0x0C08>>1]*1000)>>10;
@@ -184,7 +184,7 @@ CMngInput	*pMngInput 	= GetMngInput();
 #if defined(_WIN32DX7) || defined(_WIN32OPENGL)
 	QueryPerformanceCounter((LARGE_INTEGER*)&m_thisFrameTick);
 #elif defined(_LINUX)
-	m_thisFrameTick= SDL_GetTicks();
+//TODO	m_thisFrameTick= SDL_GetTicks();
 #endif
 
 	u32 nbMsPerFrame= GetFrameTick();

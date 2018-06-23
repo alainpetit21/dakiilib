@@ -118,8 +118,9 @@ int 			i;
 
 bool
 CMngInput::IsKeyDown(u32 p_nKey)
-{
-	return m_winKeyboard[p_nKey];
+{/*TODO
+	return m_winKeyboard[p_nKey];*/
+    return false;
 }
 
 bool
@@ -159,7 +160,7 @@ CMngInput::IsMouseLogicKeyDown(u32 p_nKey)
 }
 void
 CMngInput::GetMousePos(s32 &p_nPosX, s32 &p_nPosY)
-{
+{/*TODO
 CMngGraphic	*mngGraphic	= GetMngGraphic();
 int x, y;
 
@@ -167,7 +168,7 @@ int x, y;
 	SDL_GetMouseState(&x, &y);
 
 	p_nPosX= m_posMouseX= x - mngGraphic->GetWidth(mngGraphic->GetBB())/2;
-	p_nPosY= m_posMouseY= y - mngGraphic->GetHeight(mngGraphic->GetBB())/2;
+	p_nPosY= m_posMouseY= y - mngGraphic->GetHeight(mngGraphic->GetBB())/2;*/
 }
 
 void

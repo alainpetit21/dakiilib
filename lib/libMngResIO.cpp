@@ -40,7 +40,7 @@ m_nCptMap(0)
 }
 
 CMngImageIO::~CMngImageIO()
-{
+{/*TODO
 	for(int i= 0; i < m_nCptMap; ++i){
 		if(m_mapImage[i].pDataImage){
 			if(--m_mapImage[i].cpt == 0){
@@ -50,7 +50,7 @@ CMngImageIO::~CMngImageIO()
 		}
 	}
 
-	delete []m_mapImage;
+	delete []m_mapImage;*/
 }
 
 bool
@@ -120,7 +120,7 @@ CMngImageIO::Open(const char *p_filename, void** p_o_arData, u32* p_o_width, u32
 
 void
 CMngImageIO::Close(void** p_data)
-{
+{/*TODO
 	for(int i= 0; i < m_nCptMap; ++i){
 		if(m_mapImage[i].pDataImage == *p_data){
 			if(--m_mapImage[i].cpt == 0){
@@ -131,7 +131,7 @@ CMngImageIO::Close(void** p_data)
 
 			return;
 		}
-	}
+	}*/
 }
 
 void

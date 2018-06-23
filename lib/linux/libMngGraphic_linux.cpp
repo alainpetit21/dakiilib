@@ -84,10 +84,10 @@ SDL_Surface *ret;
 
 void
 CMngGraphic::FreeBitmap(void **p_ppBitmap)
-{
+{/*TODO
 	SDL_FreeSurface((SDL_Surface*)*p_ppBitmap);
 
-	*p_ppBitmap= 0;
+	*p_ppBitmap= 0;*/
 }
 
 void
@@ -135,7 +135,7 @@ SDL_Surface *pBitmapSrc	= (SDL_Surface*)pSrcBitmap;
 	srcRect.w	= (long)(nSw);
 	srcRect.h	= (long)(nSh);
 
-	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
+//TODO	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
 }
 
 void
@@ -208,7 +208,7 @@ SDL_Rect srcRect;
 	destRect.w	= (long)(p_srcFrame->nWidth);
 	destRect.h	= (long)(p_srcFrame->nHeight);
 
-	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
+//TODO	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
 }
 
 void*
@@ -249,7 +249,7 @@ CMngGraphic::FillRect(void* pBitmap, s32 left, s32 top, s32 right, s32 bottom, l
 {
 SDL_Rect	rec= {left, top, right-left, bottom-top};
 
-	SDL_FillRect((SDL_Surface*)pBitmap, &rec, lColor);
+//TODO	SDL_FillRect((SDL_Surface*)pBitmap, &rec, lColor);
 }
 
 //stack friendly and fast floodfill algorithm
@@ -399,7 +399,7 @@ int		h				= GetHeight(pBitmap);
 
 u32*
 CMngGraphic::LockSurface(void *p_pBitmap)
-{
+{/*TODO
 SDL_Surface *pSurface= (SDL_Surface*)p_pBitmap;
 
 	if(!pSurface)
@@ -410,7 +410,7 @@ SDL_Surface *pSurface= (SDL_Surface*)p_pBitmap;
 		if(SDL_LockSurface(pSurface) < 0)
 			return (u32*)pSurface->pixels;
 
-	return (u32*)pSurface->pixels;
+	return (u32*)pSurface->pixels;*/
 }
 
 void
@@ -544,14 +544,14 @@ float	curY;
 
 void
 CMngGraphic::UnLockSurface(void *p_pBitmap, u32 *pImage)
-{
+{/*TODO
 SDL_Surface *pSurface= (SDL_Surface*)p_pBitmap;
 
 	if(!pSurface)
 		pSurface= m_pBB;
 
 	if(SDL_MUSTLOCK(pSurface))
-		SDL_UnlockSurface(pSurface);
+		SDL_UnlockSurface(pSurface);*/
 }
 
 unsigned char

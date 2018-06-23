@@ -35,7 +35,7 @@ CMngIO		*pMngIO			= GetMngIO();
 
 	g_TheApp->LoadInstance(g_TheApp->m_pRes);
 
-	SDL_Init(SDL_INIT_VIDEO);
+//TODO	SDL_Init(SDL_INIT_VIDEO);
 
 	pMngInput->Init(g_TheApp->m_isFS);
 
@@ -66,7 +66,7 @@ CMngIO		*pMngIO			= GetMngIO();
 	if(g_TheApp->m_hasAudio)
 		pMngSound->Exit();
 
-	SDL_Quit();
+//TODO	SDL_Quit();
 
 	delete pMng3D;
 	delete pMngRenderer;
@@ -79,7 +79,7 @@ CMngIO		*pMngIO			= GetMngIO();
 
 bool
 System_Run(void)
-{
+{/*
 SDL_Event event;
 
 	while(SDL_PollEvent(&event))
@@ -100,7 +100,7 @@ SDL_Event event;
 
 	if(g_bQuit)
 		return false;
-
+*/
 	return true;
 }
 
