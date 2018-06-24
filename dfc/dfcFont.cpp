@@ -288,7 +288,7 @@ CFont::LoadTGA(const char* p_dataSource, int p_idxDest)
 {
 CMngImageIO	*mngImageIO	= GetMngImageIO();
 
-mngImageIO->Open(p_dataSource, &m_arLetters[p_idxDest].pData, &m_arLetters[p_idxDest].nWidth, &m_arLetters[p_idxDest].nHeight, CMngImageIO::SystemMem);
+    mngImageIO->Open(p_dataSource, &m_arLetters[p_idxDest].pData, &m_arLetters[p_idxDest].nWidth, &m_arLetters[p_idxDest].nHeight, CMngImageIO::SystemMem);
 }
 
 void

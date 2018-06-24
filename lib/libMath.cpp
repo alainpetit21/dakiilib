@@ -31,10 +31,9 @@ sin(u32 p_nAngle)
 	return g_arSinCos[p_nAngle & 0xFF];
 }
 
+
 const float&
 cos(u32 p_nAngle)
 {
 	return g_arSinCos[(p_nAngle+64) & 0xFF];
 }
-
-

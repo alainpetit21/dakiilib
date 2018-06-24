@@ -641,6 +641,7 @@ u32			i;
 #endif
 
 	mng3D->Flip();
+	mngGraphic->EndScene(0);
 //	printf("<-CContext::Update\n");
 }
 

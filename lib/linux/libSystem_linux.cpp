@@ -20,6 +20,7 @@ PROFILER_DEC
 
 char gTargetResPrefix[]= "linux";
 
+
 int
 LibMain(const char *p_strGame)
 {
@@ -35,17 +36,17 @@ CMngIO		*pMngIO			= GetMngIO();
 
 	g_TheApp->LoadInstance(g_TheApp->m_pRes);
 
-//TODO	SDL_Init(SDL_INIT_VIDEO);
+    VERIFY3(SDL_Init(SDL_INIT_VIDEO) >= 0, "SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
 
 	pMngInput->Init(g_TheApp->m_isFS);
 
-	if(g_TheApp->m_hasAudio)
-		pMngSound->Init(g_TheApp->m_nbChannelSound, g_TheApp->m_freqSound, g_TheApp->m_bitdepthSound);
+//TODO	if(g_TheApp->m_hasAudio)
+//TODO		pMngSound->Init(g_TheApp->m_nbChannelSound, g_TheApp->m_freqSound, g_TheApp->m_bitdepthSound);
 
 	pMngRenderer->Init(0, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_isFS, g_TheApp->m_pixelDepth);
 
-	pMng3D->Init(0, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_isFS, g_TheApp->m_pixelDepth);
-	pMng3D->BufferGeo(g_TheApp->m_nBufferGeoVertex, g_TheApp->m_nBufferGeoIndexes, g_TheApp->m_nBufferGeoTexCoord);
+//TODO	pMng3D->Init(0, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_isFS, g_TheApp->m_pixelDepth);
+//TODO	pMng3D->BufferGeo(g_TheApp->m_nBufferGeoVertex, g_TheApp->m_nBufferGeoIndexes, g_TheApp->m_nBufferGeoTexCoord);
 
 	g_TheApp->m_fontStd= new CFont();
 	g_TheApp->m_fontStd->LoadInstance("Font8.font");
@@ -60,13 +61,13 @@ CMngIO		*pMngIO			= GetMngIO();
 	delete pMngSoundIO;
 
 	pMngRenderer->Exit();
-	pMng3D->Exit();
+//TODO	pMng3D->Exit();
 	pMngInput->Exit();
 
-	if(g_TheApp->m_hasAudio)
-		pMngSound->Exit();
+//TODO	if(g_TheApp->m_hasAudio)
+//TODO		pMngSound->Exit();
 
-//TODO	SDL_Quit();
+	SDL_Quit();
 
 	delete pMng3D;
 	delete pMngRenderer;
@@ -77,15 +78,14 @@ CMngIO		*pMngIO			= GetMngIO();
 	return 0;
 }
 
+
 bool
 System_Run(void)
-{/*
+{
 SDL_Event event;
 
-	while(SDL_PollEvent(&event))
-	{
-		switch(event.type)
-		{
+	while(SDL_PollEvent(&event)){
+		switch(event.type){
 			case SDL_MOUSEBUTTONDOWN:
 				GetMngInput()->SetMouseBouton(event.button.button - 1, true);
 				break;
@@ -100,15 +100,17 @@ SDL_Event event;
 
 	if(g_bQuit)
 		return false;
-*/
+
 	return true;
 }
+
 
 bool
 System_IsActive(void)
 {
 	return g_isActive;
 }
+
 
 void
 System_Quit(void)

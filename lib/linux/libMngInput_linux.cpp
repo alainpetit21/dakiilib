@@ -21,10 +21,12 @@ CMngInput::CMngInput()
 	singletonInstance= this;
 }
 
+
 CMngInput::~CMngInput()
 {
 	singletonInstance= 0;
-};
+}
+
 
 void
 CMngInput::Init(bool p_bExclusive)
@@ -49,10 +51,12 @@ int	version;
 	js_fd[3]= open(js_device[3], O_RDONLY | O_NONBLOCK);
 }
 
+
 void
 CMngInput::Exit(void)
 {
 }
+
 
 void
 CMngInput::Manage(unsigned long p_nTimeTick)
@@ -67,7 +71,7 @@ int 			i;
 	memcpy(&m_mouseState, &m_mouseStateBB, sizeof(m_mouseStateBB));
 
 	memcpy(m_lastWinKeyboard, m_winKeyboard, sizeof(m_winKeyboard));
-//TODO	memcpy(m_winKeyboard, SDL_GetKeyState(0), sizeof(m_winKeyboard));
+	memcpy(m_winKeyboard, SDL_GetKeyboardState(0), sizeof(m_winKeyboard));
 
 	for(i= 0; i < 5; ++i){
 		memcpy(&m_lastWinJoystick[i], &m_winJoystick[i], sizeof(m_winJoystick[i]));
@@ -116,12 +120,13 @@ int 			i;
 	}
 }
 
+
 bool
 CMngInput::IsKeyDown(u32 p_nKey)
-{/*TODO
-	return m_winKeyboard[p_nKey];*/
-    return false;
+{
+	return m_winKeyboard[p_nKey];
 }
+
 
 bool
 CMngInput::IsLogicKeyDown(u32 p_nKey)
@@ -129,17 +134,20 @@ CMngInput::IsLogicKeyDown(u32 p_nKey)
 	return (m_winKeyboard[p_nKey] && !m_lastWinKeyboard[p_nKey]);
 }
 
+
 bool
 CMngInput::IsJoystickKeyDown(u32 p_idxJoystick, u32 p_nKey)
 {
 	return (m_winJoystick[p_idxJoystick] & p_nKey);
 }
 
+
 bool
 CMngInput::IsJoystickLogicKeyDown(u32 p_idxJoystick, u32 p_nKey)
 {
 	return ((m_winJoystick[p_idxJoystick] & p_nKey) && !(m_lastWinJoystick[p_nKey] & p_nKey));
 }
+
 
 bool
 CMngInput::IsMouseKeyDown(u32 p_nKey)
@@ -150,6 +158,7 @@ CMngInput::IsMouseKeyDown(u32 p_nKey)
 	return m_mouseState[p_nKey];
 }
 
+
 bool
 CMngInput::IsMouseLogicKeyDown(u32 p_nKey)
 {
@@ -158,9 +167,11 @@ CMngInput::IsMouseLogicKeyDown(u32 p_nKey)
 
 	return (m_mouseState[p_nKey] && !m_lastMouseState[p_nKey]);
 }
+
+
 void
 CMngInput::GetMousePos(s32 &p_nPosX, s32 &p_nPosY)
-{/*TODO
+{
 CMngGraphic	*mngGraphic	= GetMngGraphic();
 int x, y;
 
@@ -168,8 +179,9 @@ int x, y;
 	SDL_GetMouseState(&x, &y);
 
 	p_nPosX= m_posMouseX= x - mngGraphic->GetWidth(mngGraphic->GetBB())/2;
-	p_nPosY= m_posMouseY= y - mngGraphic->GetHeight(mngGraphic->GetBB())/2;*/
+	p_nPosY= m_posMouseY= y - mngGraphic->GetHeight(mngGraphic->GetBB())/2;
 }
+
 
 void
 CMngInput::SetMouseBouton(s32 p_idxBouton, int p_isOn)
@@ -183,6 +195,7 @@ CMngInput::GetAsciiCharDown(void)
 {
 	return 0;
 }
+
 
 int
 CMngInput::AsciiToID(char *p_strKey)

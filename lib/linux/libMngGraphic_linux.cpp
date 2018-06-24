@@ -7,6 +7,7 @@ CMngGraphic* CMngGraphic::singletonInstance= 0;
 
 u32 ClearColor;
 
+
 static unsigned short
 Convert32to16(unsigned long p_nPixel)
 {
@@ -18,8 +19,8 @@ Convert32to16(unsigned long p_nPixel)
 }
 
 CMngGraphic::CMngGraphic():
-m_pBB(0),
-m_pFB(0)
+m_sdlWindow(0),
+m_sdlScreenSurface(0)
 {
 	ASSERT2(!singletonInstance, "Another instance of CMngGraphic is already instanced");
 
@@ -42,52 +43,52 @@ CMngGraphic::Init(void* p_hwnd, long FBwidth, long FBheight, long BBwidth, long 
 	m_widthBB		= BBwidth;
 	m_heightBB		= BBheight;
 
-/*TODO
-	if(!m_isFS){
-		VERIFY2(m_pBB= SDL_SetVideoMode(FBwidth, FBheight, p_nPixelDepth, SDL_OPENGL), "Unable to set video mode\n");
-	}else{
-		VERIFY2(m_pBB= SDL_SetVideoMode(FBwidth, FBheight, p_nPixelDepth, SDL_OPENGL|SDL_FULLSCREEN), "Unable to set video mode\n");
-	}
+	WARNING2(m_isFS, "Warning full screen mode disable for now")
 
-//  SDL_WM_SetCaption("Dakiisoft - ", NULL);
+	if(p_hwnd)
+        m_sdlWindow= (SDL_Window*)p_hwnd;
+    else
+        ASSERT3(m_sdlWindow= SDL_CreateWindow( "Dakiisoft - ", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, BBwidth, BBheight, SDL_WINDOW_SHOWN), "Window could not be created! SDL_Error: %s\n", SDL_GetError() );
 
-	m_mngFx.Init();*/
+    m_sdlScreenSurface= SDL_GetWindowSurface(m_sdlWindow);
+    SDL_FillRect(m_sdlScreenSurface, 0, SDL_MapRGB(m_sdlScreenSurface->format, 0xFF, 0xFF, 0xFF));
+    SDL_UpdateWindowSurface(m_sdlWindow);
+
+	m_mngFx.Init();
 }
 
 void
 CMngGraphic::Exit()
 {
+    SDL_DestroyWindow(m_sdlWindow);
 }
 
 void
 CMngGraphic::SetColorKey(void *pBitmap, unsigned long p_nColorKey)
 {
-//TODO	SDL_SetColorKey((SDL_Surface*)pBitmap, SDL_SRCCOLORKEY, 0xFFFF00FF);
+	SDL_SetColorKey((SDL_Surface*)pBitmap, 1, 0xFFFF00FF);
 }
 
 void*
 CMngGraphic::NewBitmap(u32 p_nWidth, u32 p_nHeight, u32 p_nModeSoftware)
-{/*TODO
+{
 SDL_Surface *ret;
 
-	if(p_nModeSoftware == 0)
-		ret= SDL_CreateRGBSurface(SDL_HWSURFACE, p_nWidth, p_nHeight, m_pBB->format->BitsPerPixel, m_pBB->format->Rmask, m_pBB->format->Gmask, m_pBB->format->Bmask, m_pBB->format->Amask);
-	else
-		ret= SDL_CreateRGBSurface(SDL_SWSURFACE, p_nWidth, p_nHeight, m_pBB->format->BitsPerPixel, m_pBB->format->Rmask, m_pBB->format->Gmask, m_pBB->format->Bmask, m_pBB->format->Amask);
+	ret= SDL_CreateRGBSurface(0, p_nWidth, p_nHeight, m_sdlScreenSurface->format->BitsPerPixel, m_sdlScreenSurface->format->Rmask, m_sdlScreenSurface->format->Gmask, m_sdlScreenSurface->format->Bmask, m_sdlScreenSurface->format->Amask);
 
 	s32 colorkey= SDL_MapRGB(ret->format, 0xFF, 0x00, 0xFF);
-	SDL_SetColorKey(ret, SDL_SRCCOLORKEY, colorkey);
+	SDL_SetColorKey(ret, 1, colorkey);
 
-	return (void*)ret;*/
+	return (void*)ret;
 }
 
 
 void
 CMngGraphic::FreeBitmap(void **p_ppBitmap)
-{/*TODO
+{
 	SDL_FreeSurface((SDL_Surface*)*p_ppBitmap);
 
-	*p_ppBitmap= 0;*/
+	*p_ppBitmap= 0;
 }
 
 void
@@ -108,6 +109,7 @@ CMngGraphic::DrawPartialBitmapAlpha(void *pDestBitmap, s32 nDx, s32 nDy, u32 nDw
 {
 	if(pSrcBitmap)
 		DrawPartialBitmap(pDestBitmap, nDx, nDy, nDw, nDh, nSx, nSy, nSw, nSh, p_angle, p_scale, nMode, pSrcBitmap);
+
 }
 
 void
@@ -117,7 +119,7 @@ SDL_Surface *pBitmapDest= (SDL_Surface*)pDestBitmap;
 SDL_Surface *pBitmapSrc	= (SDL_Surface*)pSrcBitmap;
 
 	if(!pDestBitmap)
-		pBitmapDest= m_pBB;
+		pBitmapDest= m_sdlScreenSurface;
 
 	if(!BitmapDoClipping(&nDx, &nDy, &nDw, &nDh, &nSx, &nSy, &nSw, &nSh))
 		return;
@@ -135,7 +137,7 @@ SDL_Surface *pBitmapSrc	= (SDL_Surface*)pSrcBitmap;
 	srcRect.w	= (long)(nSw);
 	srcRect.h	= (long)(nSh);
 
-//TODO	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
+	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
 }
 
 void
@@ -169,8 +171,6 @@ s32		nSh= GetHeight(pBitmapSrc);
 	DrawBitmap(pDestBitmap, s32(nSx+nSw), s32(nSy+nSh), nDw, nDh, 0, 1, 0, pBitmapSrc);
 }
 
-
-
 void
 CMngGraphic::DrawFrame(void *pDestBitmap, s32 nDx, s32 nDy, u8 p_angle, float p_scale, long nMode, void *p_src)
 {
@@ -182,7 +182,7 @@ SDL_Rect destRect;
 SDL_Rect srcRect;
 
 	if(!pDestBitmap)
-		pBitmapDest= m_pBB;
+		pBitmapDest= m_sdlScreenSurface;
 
 	if((p_scale != 1) && (this->m_pixelFormat == 16)){
 //		DrawScaleFrame16(pDestBitmap, nDx, nDy, p_scale, nMode, p_src);
@@ -208,22 +208,22 @@ SDL_Rect srcRect;
 	destRect.w	= (long)(p_srcFrame->nWidth);
 	destRect.h	= (long)(p_srcFrame->nHeight);
 
-//TODO	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
+	SDL_BlitSurface(pBitmapSrc, &srcRect, pBitmapDest, &destRect);
 }
 
 void*
 CMngGraphic::BeginScene(void)
 {
 	//Debug
-	FillRect(m_pBB, 0, 0, m_widthBB, m_heightBB, 0x0);
+	FillRect(m_sdlScreenSurface, 0, 0, m_widthBB, m_heightBB, 0x0);
 
-	return (void*)m_pBB;
+	return (void*)m_sdlScreenSurface;
 }
 
 void
 CMngGraphic::EndScene(void** p_bit)
 {
-//TODO	SDL_Flip(m_pBB);
+	SDL_UpdateWindowSurface(m_sdlWindow);
 }
 
 void
@@ -249,7 +249,7 @@ CMngGraphic::FillRect(void* pBitmap, s32 left, s32 top, s32 right, s32 bottom, l
 {
 SDL_Rect	rec= {left, top, right-left, bottom-top};
 
-//TODO	SDL_FillRect((SDL_Surface*)pBitmap, &rec, lColor);
+	SDL_FillRect((SDL_Surface*)pBitmap, &rec, lColor);
 }
 
 //stack friendly and fast floodfill algorithm
@@ -399,18 +399,18 @@ int		h				= GetHeight(pBitmap);
 
 u32*
 CMngGraphic::LockSurface(void *p_pBitmap)
-{/*TODO
+{
 SDL_Surface *pSurface= (SDL_Surface*)p_pBitmap;
 
 	if(!pSurface)
-		pSurface= m_pBB;
+		pSurface= m_sdlScreenSurface;
 
 	m_lastLockedPitch= GetPitch(pSurface);
 	if(SDL_MUSTLOCK(pSurface))
 		if(SDL_LockSurface(pSurface) < 0)
 			return (u32*)pSurface->pixels;
 
-	return (u32*)pSurface->pixels;*/
+	return (u32*)pSurface->pixels;
 }
 
 void
@@ -544,14 +544,14 @@ float	curY;
 
 void
 CMngGraphic::UnLockSurface(void *p_pBitmap, u32 *pImage)
-{/*TODO
+{
 SDL_Surface *pSurface= (SDL_Surface*)p_pBitmap;
 
 	if(!pSurface)
-		pSurface= m_pBB;
+		pSurface= m_sdlScreenSurface;
 
 	if(SDL_MUSTLOCK(pSurface))
-		SDL_UnlockSurface(pSurface);*/
+		SDL_UnlockSurface(pSurface);
 }
 
 unsigned char

@@ -1,5 +1,3 @@
-//#include <SDL/SDL.h>
-//#include <SDL/SDL_mixer.h>
 #include <SDL.h>
 
 #include "lib.h"
@@ -12,6 +10,7 @@
 
 CMngSound* CMngSound::singletonInstance= 0;
 
+
 CMngSound::CMngSound():
 m_pMusic(0)
 {
@@ -19,10 +18,12 @@ m_pMusic(0)
 	singletonInstance= this;
 }
 
+
 CMngSound::~CMngSound()
 {
 	singletonInstance= 0;
 }
+
 
 void
 CMngSound::Init(u32 p_nbChannel, u32 p_freq, u32 p_bitdepth)
@@ -36,12 +37,14 @@ CMngSound::Init(u32 p_nbChannel, u32 p_freq, u32 p_bitdepth)
 	m_isOn= true;*/
 }
 
+
 void
 CMngSound::Exit(void)
 {/*TODO
 	Mix_CloseAudio();
 	m_isOn= false;*/
 }
+
 
 void*
 CMngSound::NewSound(u32 p_size)
@@ -52,20 +55,24 @@ CMngSound::NewSound(u32 p_size)
 	return 0;
 }
 
+
 void
 CMngSound::FreeSound(void *p_pSound)
 {
 }
+
 
 void
 CMngSound::LockSound(void *p_pSound, u16 **p_o_pLock1, u32 *p_o_pSizeLock1)
 {
 }
 
+
 void
 CMngSound::UnlockSound(void *p_pSound, u16 *p_o_pLock1, u32 p_o_pSizeLock1)
 {
 }
+
 
 void
 CMngSound::PlaySound(void *p_pSound, bool p_isLooping)
@@ -73,6 +80,7 @@ CMngSound::PlaySound(void *p_pSound, bool p_isLooping)
 	if(!p_pSound)
 		return ;
 }
+
 
 bool
 CMngSound::IsPlaying(void *p_pSound)
@@ -83,16 +91,19 @@ CMngSound::IsPlaying(void *p_pSound)
 	return false;
 }
 
+
 s32
 CMngSound::GetPosPlaying(void *p_pSound)
 {
 	return 0;
 }
 
+
 void
 CMngSound::SetPosPlaying(void *p_pSound, s32 p_pos)
 {
 }
+
 
 void
 CMngSound::Manage(u32 p_nTimeTick)

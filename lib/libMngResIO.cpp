@@ -8,14 +8,13 @@
 #include <tremor/ivorbiscodec.h>
 #endif
 
-//#include <SDL/SDL_image.h>
+#include <SDL_image.h>
 
 #include "lib.h"
 #include "libMacros.h"
 #include "libMngResIO.h"
 #include "libMngGraphic.h"
 #include "libMngSound.h"
-//#include "TGALoader.h"
 
 #pragma pack(push, forImage, 1)
 typedef struct tagTRgb
@@ -30,6 +29,7 @@ extern char gTargetResPrefix[];
 
 CMngImageIO* CMngImageIO::singletonInstance= 0;
 
+
 CMngImageIO::CMngImageIO():
 m_nCptMap(0)
 {
@@ -39,8 +39,9 @@ m_nCptMap(0)
 	CMngImageIO::singletonInstance= this;
 }
 
+
 CMngImageIO::~CMngImageIO()
-{/*TODO
+{
 	for(int i= 0; i < m_nCptMap; ++i){
 		if(m_mapImage[i].pDataImage){
 			if(--m_mapImage[i].cpt == 0){
@@ -50,8 +51,9 @@ CMngImageIO::~CMngImageIO()
 		}
 	}
 
-	delete []m_mapImage;*/
+	delete []m_mapImage;
 }
+
 
 bool
 CMngImageIO::Copy(void *p_dataSrc, void** p_o_arData, u32* p_o_width, u32* p_o_height)
@@ -69,11 +71,10 @@ CMngImageIO::Copy(void *p_dataSrc, void** p_o_arData, u32* p_o_width, u32* p_o_h
 	return false;
 }
 
+
 void
 CMngImageIO::Open(const char *p_filename, void** p_o_arData, u32* p_o_width, u32* p_o_height, bool p_nMode)
 {
-//	printf("CMngImageIO::Open-> %s\n", p_filename);
-
 	if((m_nCptMap+1) == m_nSizeBuffer)
 		ReallocBuffer(m_nSizeBuffer+(m_nSizeBuffer>>1));
 
@@ -87,15 +88,14 @@ CMngImageIO::Open(const char *p_filename, void** p_o_arData, u32* p_o_width, u32
 		}
 	}
 
-//	printf("%s\n", p_filename);
 	CDString	tmpFilename= p_filename;
 
 	tmpFilename= "resInput/";
 	tmpFilename+= gTargetResPrefix;
 	tmpFilename+= "/";
 	tmpFilename+= p_filename;
-//TODO	SDL_Surface	*tmpLoading= IMG_Load(tmpFilename.m_arBuffer);
-/*TODO
+	SDL_Surface	*tmpLoading= IMG_Load(tmpFilename.m_arBuffer);
+
 	if(u32(tmpLoading) == 0x0){
 		tmpFilename= "resInput/";
 		tmpFilename+= p_filename;
@@ -103,8 +103,7 @@ CMngImageIO::Open(const char *p_filename, void** p_o_arData, u32* p_o_width, u32
 		ASSERT3(tmpLoading, "Couldn't find Image: %s\n", tmpFilename.m_arBuffer);
 	}
 
-	s32 colorkey= SDL_MapRGB(tmpLoading->format, 0xFF, 0x00, 0xFF);
-	SDL_SetColorKey(tmpLoading, SDL_SRCCOLORKEY, colorkey);
+	SDL_SetColorKey(tmpLoading, 1, SDL_MapRGB(tmpLoading->format, 0xFF, 0x00, 0xFF));
 	*p_o_arData	= m_mapImage[m_nCptMap].pDataImage	= tmpLoading;
 	*p_o_width	= m_mapImage[m_nCptMap].nWidth		= tmpLoading->w;
 	*p_o_height	= m_mapImage[m_nCptMap].nHeight		= tmpLoading->h;
@@ -112,15 +111,14 @@ CMngImageIO::Open(const char *p_filename, void** p_o_arData, u32* p_o_width, u32
 	strcpy(m_mapImage[m_nCptMap].strFilename, p_filename);
 	++m_mapImage[m_nCptMap].cpt;
 	++m_nCptMap;
-//	printf("<-CMngImageIO::Open\n");
 
 //	glGenTextures(1, nIdGL)
-*/
 }
+
 
 void
 CMngImageIO::Close(void** p_data)
-{/*TODO
+{
 	for(int i= 0; i < m_nCptMap; ++i){
 		if(m_mapImage[i].pDataImage == *p_data){
 			if(--m_mapImage[i].cpt == 0){
@@ -131,8 +129,9 @@ CMngImageIO::Close(void** p_data)
 
 			return;
 		}
-	}*/
+	}
 }
+
 
 void
 CMngImageIO::ReallocBuffer(int p_size)
@@ -147,10 +146,12 @@ CMngImageIO::ReallocBuffer(int p_size)
 	m_nSizeBuffer= p_size;
 }
 
+
 //////////////
 //Sound
 
 CMngSoundIO* CMngSoundIO::singletonInstance= 0;
+
 
 CMngSoundIO::CMngSoundIO():
 m_nCptMap(0)
@@ -160,6 +161,7 @@ m_nCptMap(0)
 
 	CMngSoundIO::singletonInstance= this;
 }
+
 
 CMngSoundIO::~CMngSoundIO()
 {
@@ -175,6 +177,7 @@ CMngSoundIO::~CMngSoundIO()
 
 	delete []m_mapSound;
 }
+
 
 bool
 CMngSoundIO::Copy(void *p_dataSrc, void** p_o_arData)
@@ -248,6 +251,7 @@ CMngSound		*mngSound= GetMngSound();
 	++m_nCptMap;
 }
 
+
 void
 CMngSoundIO::Close(void** p_data)
 {/*TODO
@@ -264,6 +268,7 @@ CMngSoundIO::Close(void** p_data)
 		}
 	}*/
 }
+
 
 void
 CMngSoundIO::ReallocBuffer(int p_size)

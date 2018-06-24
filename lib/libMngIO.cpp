@@ -11,6 +11,7 @@ CMngIO::CMngIO(void)
 	singletonInstance= this;
 }
 
+
 io
 CMngIO::Open(const char *p_filename)
 {
@@ -25,11 +26,13 @@ io ret= (io)fopen(p_filename, "rb");
 	return ret;
 }
 
+
 io
 CMngIO::OpenNoCheck(const char *p_filename)
 {
 	return (io)fopen(p_filename, "rb");
 }
+
 
 u32
 CMngIO::GetSize(io p_ioObject)
@@ -43,6 +46,7 @@ u32 ret=0;
 	return ret;
 }
 
+
 void
 CMngIO::Read(io p_ioObject, void* p_buffer, u32 p_len)
 {
@@ -51,6 +55,7 @@ u32 dwRead= fread(p_buffer, 1, p_len, (FILE*)p_ioObject);
 	ASSERT2(dwRead == p_len, "Can't Read File");
 }
 
+
 void
 CMngIO::Write(io p_ioObject, const void* p_buffer, u32 p_len)
 {
@@ -58,6 +63,7 @@ u32 dwWritten= fwrite(p_buffer, 1, p_len, (FILE*)p_ioObject);
 
 	ASSERT2(dwWritten == p_len, "Can't Write File");
 }
+
 
 void
 CMngIO::Close(io p_ioObject)

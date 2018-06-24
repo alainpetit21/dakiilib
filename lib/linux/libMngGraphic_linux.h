@@ -2,7 +2,6 @@
 #define _RENDER_H
 
 #include <math.h>
-//#include <SDL/SDL.h>
 #include <SDL.h>
 
 #include "libMath.h"
@@ -70,16 +69,15 @@ public:
 	bool	IsFullscreen(void)	{return m_isFS;};
 
 	CMngFx*	GetMngFx(void)				{return &m_mngFx;};
-	void*	GetFB(void)					{return (void*)m_pFB;}
-	void*	GetBB(void)					{return (void*)m_pBB;}
+	void*	GetBB(void)					{return (void*)m_sdlScreenSurface;}
 	long	GetWidth(void *p_pBitmap)	{return long(((SDL_Surface*)p_pBitmap)->w);}
 	long	GetPitch(void *p_pBitmap)	{return long(((SDL_Surface*)p_pBitmap)->pitch);}
 	long	GetHeight(void *p_pBitmap)	{return long(((SDL_Surface*)p_pBitmap)->h);}
 	long	GetLockedPitch(void)		{return m_lastLockedPitch;};
 	u32		GetPixelMode(void)			{return m_pixelFormat;};
 
-	SDL_Surface *m_pBB;
-	SDL_Surface *m_pFB;
+	SDL_Window* m_sdlWindow;
+	SDL_Surface *m_sdlScreenSurface;
 
 	s32		m_isFS;
 	s32		m_widthFB, m_heightFB;
