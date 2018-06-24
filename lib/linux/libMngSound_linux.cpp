@@ -27,22 +27,22 @@ CMngSound::~CMngSound()
 
 void
 CMngSound::Init(u32 p_nbChannel, u32 p_freq, u32 p_bitdepth)
-{/*TODO
-	VERIFY2(SDL_Init(SDL_INIT_AUDIO) >= 0, "Cannot SDL_Init\n");
-//TODO	VERIFY2(Mix_OpenAudio(p_freq, AUDIO_S16, p_nbChannel, 512) != -1, "Cannot Mix_OpenAudio\n");
-//TODO	Mix_AllocateChannels(MIX_CHANNELS);
+{
+	VERIFY3(SDL_Init(SDL_INIT_AUDIO) >= 0, "Cannot SDL_Init Audio : %s\n", SDL_GetError() );
+	VERIFY3(Mix_OpenAudio(p_freq, AUDIO_S16, p_nbChannel, 512) != -1, "Cannot Mix_OpenAudio : %s\n", SDL_GetError() );
+	Mix_AllocateChannels(MIX_CHANNELS);
 
-//TODO	Mix_Volume(-1, m_nVolume= MIX_MAX_VOLUME);
+	Mix_Volume(-1, m_nVolume= MIX_MAX_VOLUME);
 	Mix_VolumeMusic(MIX_MAX_VOLUME);
-	m_isOn= true;*/
+	m_isOn= true;
 }
 
 
 void
 CMngSound::Exit(void)
-{/*TODO
+{
 	Mix_CloseAudio();
-	m_isOn= false;*/
+	m_isOn= false;
 }
 
 

@@ -40,8 +40,8 @@ CMngIO		*pMngIO			= GetMngIO();
 
 	pMngInput->Init(g_TheApp->m_isFS);
 
-//TODO	if(g_TheApp->m_hasAudio)
-//TODO		pMngSound->Init(g_TheApp->m_nbChannelSound, g_TheApp->m_freqSound, g_TheApp->m_bitdepthSound);
+	if(g_TheApp->m_hasAudio)
+		pMngSound->Init(g_TheApp->m_nbChannelSound, g_TheApp->m_freqSound, g_TheApp->m_bitdepthSound);
 
 	pMngRenderer->Init(0, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_width, g_TheApp->m_height, g_TheApp->m_isFS, g_TheApp->m_pixelDepth);
 
@@ -64,8 +64,8 @@ CMngIO		*pMngIO			= GetMngIO();
 //TODO	pMng3D->Exit();
 	pMngInput->Exit();
 
-//TODO	if(g_TheApp->m_hasAudio)
-//TODO		pMngSound->Exit();
+	if(g_TheApp->m_hasAudio)
+		pMngSound->Exit();
 
 	SDL_Quit();
 

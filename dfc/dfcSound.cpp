@@ -44,11 +44,11 @@ CSound::LoadInstance(const char* p_dataSource)
 
 void
 CSound::Manage(u32 p_nTimeTick)
-{/*TODO
+{
 	if(m_isPlaying && !Mix_Playing(m_nChannel)){
 		m_isFinished= true;
 		m_isPlaying= false;
-	}*/
+	}
 }
 
 void
@@ -68,5 +68,5 @@ CMngSound *mngSound= GetMngSound();
 	m_isPlaying	= true;
 	m_isFinished= false;
 
-//TODO	m_nChannel= Mix_PlayChannel(-1, (Mix_Chunk*)m_pData, m_isLooping?-1:0);
+	m_nChannel= Mix_PlayChannel(-1, (Mix_Chunk*)m_pData, m_isLooping?-1:0);
 }

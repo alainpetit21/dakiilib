@@ -1,13 +1,3 @@
-#ifdef _LINUX
-//TODO#include <ogg/ogg.h>
-//TODO#include <vorbis/vorbisfile.h>
-//TODO#include <vorbis/codec.h>
-#elif defined(_GP2X)
-#include <tremor/ogg.h>
-#include <tremor/ivorbisfile.h>
-#include <tremor/ivorbiscodec.h>
-#endif
-
 #include <SDL_image.h>
 
 #include "lib.h"
@@ -149,7 +139,6 @@ CMngImageIO::ReallocBuffer(int p_size)
 
 //////////////
 //Sound
-
 CMngSoundIO* CMngSoundIO::singletonInstance= 0;
 
 
@@ -218,7 +207,6 @@ CMngSound		*mngSound= GetMngSound();
 	//Opening
 	{
 	CDString		filename= p_filename;
-/*TODO
 		strcpy(m_mapSound[m_nCptMap].strFilename, p_filename);
 		*p_o_arData= Mix_LoadWAV(filename.m_arBuffer);
 		if(u32(*p_o_arData) == 0x0){
@@ -243,7 +231,7 @@ CMngSound		*mngSound= GetMngSound();
 			}
 		}
 
-		strcpy(m_mapSound[m_nCptMap].strFilename, filename.m_arBuffer);*/
+		strcpy(m_mapSound[m_nCptMap].strFilename, filename.m_arBuffer);
 	}
 
 	m_mapSound[m_nCptMap].pDataSound= *p_o_arData;
@@ -254,7 +242,7 @@ CMngSound		*mngSound= GetMngSound();
 
 void
 CMngSoundIO::Close(void** p_data)
-{/*TODO
+{
 	for(int i= 0; i < m_nCptMap; ++i){
 		if(m_mapSound[i].pDataSound == *p_data){
 			if(--m_mapSound[i].cpt == 0){
@@ -266,7 +254,7 @@ CMngSoundIO::Close(void** p_data)
 
 			return;
 		}
-	}*/
+	}
 }
 
 

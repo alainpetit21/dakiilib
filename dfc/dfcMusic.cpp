@@ -22,12 +22,12 @@ CMusic::~CMusic(void)
 		return;
 
 	Stop();
-//TODO	Mix_FreeMusic(m_pMusic);
+	Mix_FreeMusic(m_pMusic);
 }
 
 void
 CMusic::LoadOGG(const char* p_dataSource)
-{/*TODO
+{
 CMngSound *mngSound= GetMngSound();
 
 	if(!mngSound->IsOn())
@@ -50,7 +50,7 @@ CMngSound *mngSound= GetMngSound();
 				ASSERT3(m_pMusic, "Couldn't find Sound Ogg: %s\n", p_dataSource);
 			}
 		}
-	}*/
+	}
 }
 
 
@@ -72,7 +72,7 @@ CMusic::LoadInstance(const char* p_dataSource)
 
 void
 CMusic::Manage(u32 p_nTimeTick)
-{/*TODO
+{
 CMngSound *mngSound= GetMngSound();
 
 	if(!mngSound->IsOn())
@@ -83,7 +83,7 @@ CMngSound *mngSound= GetMngSound();
 			Mix_RewindMusic();
 			Play();
 		}
-	}*/
+	}
 }
 
 void
@@ -99,15 +99,15 @@ CMusic::Play(void)
 
 	m_isPlaying	= true;
 	m_isFinished= false;
-//TODO	Mix_PlayMusic(m_pMusic, 0);
+	Mix_PlayMusic(m_pMusic, 0);
 
 	GetMngSound()->m_pMusic= this;
-//TODO	Mix_HookMusicFinished(musicFinished);
+	Mix_HookMusicFinished(musicFinished);
 }
 
 void
 CMusic::Stop(void)
 {
 	m_isPlaying= false;
-//TODO	Mix_HaltMusic();
+	Mix_HaltMusic();
 }

@@ -4,9 +4,6 @@
 #ifdef _GP2X
 #include <tremor/ogg.h>
 #include <tremor/ivorbisfile.h>
-#elif defined(_LINUX)
-//#include <ogg/ogg.h>TODO
-//#include <vorbis/vorbisfile.h>TODO
 #endif
 #include "dfcPhysObj.h"
 
