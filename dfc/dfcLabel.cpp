@@ -20,9 +20,9 @@ m_left(0),
 m_top(0),
 m_right(0),
 m_bottom(0),
-m_isMultiline(0),
-m_mode(0),
-m_overflownInY(0)
+m_nMode(0),
+m_isMultiline(false),
+m_overflownInY(false)
 {
 
 }
@@ -58,7 +58,7 @@ CLabel::LoadInstance(const char* p_dataSource)
 	m_isMultiline= atoi((m_pXml->GetData()).m_arBuffer);
 
 	m_pXml->FindElem("MODE");
-	m_mode= atoi((m_pXml->GetData()).m_arBuffer);
+	m_nMode= atoi((m_pXml->GetData()).m_arBuffer);
 
 	m_pXml->FindElem("FONT_FILENAME_USED");
 	SetFont(CFont::Find((m_pXml->GetData()).m_arBuffer));
@@ -103,7 +103,7 @@ CLabel::Update(void)
 
 	if(!m_isMultiline){
 
-		switch(m_mode){
+		switch(m_nMode){
 		case 0:
 			m_pFont->PutS(CumulLeft, CumulTop, &m_text[m_nOffsetBegin]);
 		break;
@@ -169,7 +169,7 @@ CLabel::Update(void)
 			}
 			lastWidthLine	= widthLine;
 
-			switch(m_mode){
+			switch(m_nMode){
 			case 0:
 				m_pFont->PutS(CumulLeft, y, temp);
 			break;

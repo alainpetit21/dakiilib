@@ -247,7 +247,7 @@ int	height= GetHeight(p_pBitmap);
 void
 CMngGraphic::FillRect(void* pBitmap, s32 left, s32 top, s32 right, s32 bottom, long lColor)
 {
-SDL_Rect	rec= {left, top, right-left, bottom-top};
+SDL_Rect	rec= {(int)left, (int)top, (int)right-left, (int)bottom-top};
 
 	SDL_FillRect((SDL_Surface*)pBitmap, &rec, lColor);
 }

@@ -41,13 +41,13 @@ public :
 	CFont	*m_pFont;
 	u32		m_nOffsetBegin;
 
-
 	s32		m_left;
 	s32		m_top;
 	s32		m_right;
 	s32		m_bottom;
+
+	int		m_nMode;
 	bool	m_isMultiline;
-	bool	m_mode;
 	bool	m_overflownInY;
 };
 

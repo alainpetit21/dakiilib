@@ -44,9 +44,12 @@ CXml::operator=(const CXml& markup)
 		m_nPosArrayLenght= 0;
 	}
 
-	m_aPos= new ElemPos[markup.m_nPosArrayLenght];
 	m_nPosArrayLenght= markup.m_nPosArrayLenght;
-	memcpy(m_aPos, markup.m_aPos, sizeof(ElemPos) * m_nPosArrayLenght);
+	m_aPos= new ElemPos[m_nPosArrayLenght];
+	for(int i= 0; i < m_nPosArrayLenght; ++i)
+		m_aPos[i]= markup.m_aPos[i];
+
+//	memcpy(m_aPos, markup.m_aPos, sizeof(ElemPos) * m_nPosArrayLenght);
 
 
 	m_csDoc= markup.m_csDoc;
@@ -78,7 +81,7 @@ CXml::SetDoc(const char* szDoc)
 	// Parse document
 	bool bWellFormed= false;
 	if(m_csDoc.GetLength()){
-		memset(&m_aPos[0], 0, sizeof(ElemPos));
+//		memset(&m_aPos[0], 0, sizeof(ElemPos));
 
 		int iPos= x_ParseElem(0);
 		if(iPos > 0){
@@ -89,7 +92,7 @@ CXml::SetDoc(const char* szDoc)
 
 	// Clear indexes if parse failed or empty document
 	if(!bWellFormed){
-		memset(&m_aPos[0], 0, sizeof(ElemPos));
+//		memset(&m_aPos[0], 0, sizeof(ElemPos));
 		m_iPosFree= 1;
 	}
 
@@ -194,19 +197,18 @@ bool CXml::OutOfElem()
 
 int CXml::x_GetFreePos()
 {
-	//
 	// This returns the index of the next unused ElemPos in the array
-	//
 	if ( m_iPosFree == m_nPosArrayLenght ){
-
 		ElemPos *temp= new ElemPos[(m_iPosFree + m_iPosFree / 2)];
-		memcpy(temp, m_aPos, sizeof(ElemPos) * m_nPosArrayLenght);
+		for(int i= 0; i < m_nPosArrayLenght; ++i)
+			temp[i]= m_aPos[i];
 
 		m_nPosArrayLenght= m_iPosFree + m_iPosFree / 2;
 
 		SAFE_DELETE(m_aPos);
 		m_aPos= temp;
 	}
+
 	++m_iPosFree;
 	return m_iPosFree - 1;
 }
