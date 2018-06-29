@@ -229,6 +229,7 @@ CMngGraphic::EndScene(void** p_bit)
 void
 CMngGraphic::FillBitmap(void* p_pBitmap, long lColor)
 {
+/*
 int	width= GetWidth(p_pBitmap);
 int	pitch= GetPitch(p_pBitmap)>>2;
 int	height= GetHeight(p_pBitmap);
@@ -242,6 +243,10 @@ int	height= GetHeight(p_pBitmap);
 		}
 		UnLockSurface(p_pBitmap, pDstPixel);
 	}
+	*/
+SDL_Rect	rec= {(int)0, (int)0, (int)GetWidth(p_pBitmap), (int)GetHeight(p_pBitmap)};
+
+	SDL_FillRect((SDL_Surface*)p_pBitmap, &rec, lColor);
 }
 
 void
