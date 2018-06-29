@@ -41,10 +41,12 @@
 			<Add directory="dfc" />
 			<Add directory="helper" />
 			<Add directory="lib" />
+			<Add directory="/usr/include/SDL2" />
 		</Compiler>
 		<Linker>
 			<Add option="`sdl2-config --libs`" />
 		</Linker>
+		<Unit filename="README.md" />
 		<Unit filename="dfc/dfc.h" />
 		<Unit filename="dfc/dfc3DEntity.cpp" />
 		<Unit filename="dfc/dfc3DEntity.h" />
@@ -94,42 +96,6 @@
 		<Unit filename="helper/DString.h" />
 		<Unit filename="helper/XMLLoader.cpp" />
 		<Unit filename="helper/XMLLoader.h" />
-		<Unit filename="lib/gp2x/libMacros_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMng3D_gp2x.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMng3D_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngGraphic_gp2x.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngGraphic_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngInput_gp2x.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngInput_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngSound_gp2x.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libMngSound_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libSystem_gp2x.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/libTypes_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="lib/gp2x/lib_gp2x.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="lib/lib.h" />
 		<Unit filename="lib/libMacros.h" />
 		<Unit filename="lib/libMath.cpp" />

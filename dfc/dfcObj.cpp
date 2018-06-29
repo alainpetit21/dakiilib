@@ -174,9 +174,12 @@ char	strHeading[64];
 						}
 
 		#ifdef _DEBUG
-						if(pObj->IsKindOf(CLSID_CSceneEngine)){
-							ASSERT2(i == (nNbObject - 1), "CLSID_CSceneEngine Obj Need to be last in context!! ");
-						}
+						if(pObj){
+                            if(pObj->IsKindOf(CLSID_CSceneEngine))
+                                ASSERT2(i == (nNbObject - 1), "CLSID_CSceneEngine Obj Need to be last in context!! ");
+						}else{
+                            int toto=23;
+                        }
 		#endif
 						if(pObj){
 							pObj->LoadInstance(strFilename.m_arBuffer);

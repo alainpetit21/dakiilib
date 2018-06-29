@@ -1,88 +1,170 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="GP2X_Release" />
-	<File name="dfc/dfcApp.cpp" open="0" top="0" tabpos="7">
-		<Cursor position="4501" topLine="178" />
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Linux_Debug" />
+	<File name="lib/libMng3D.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="277" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcBackground.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="7147" topLine="256" />
+	<File name="dfc/dfc3DEntity.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcBackground.h" open="0" top="0" tabpos="0">
-		<Cursor position="182" topLine="0" />
+	<File name="dfc/dfcSound.cpp" open="0" top="0" tabpos="33" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1059" topLine="42" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcCamera.h" open="0" top="0" tabpos="0">
-		<Cursor position="541" topLine="4" />
+	<File name="dfc/dfc3DEntity.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="86" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcContext.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="13157" topLine="468" />
+	<File name="lib/libMacros.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="91" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcContext.h" open="1" top="0" tabpos="6">
-		<Cursor position="989" topLine="53" />
+	<File name="lib/linux/libMngGraphic_linux.h" open="0" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3969" topLine="68" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcDictionary.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="1554" topLine="48" />
+	<File name="lib/linux/libSystem_linux.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcFont.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="7529" topLine="283" />
+	<File name="dfc/dfcMusic.h" open="0" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="214" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcObj.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="5659" topLine="161" />
+	<File name="lib/lib.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="335" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcPhysObj.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="475" topLine="15" />
+	<File name="dfc/dfcMusic.cpp" open="0" top="0" tabpos="31" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2138" topLine="83" />
+		</Cursor>
 	</File>
-	<File name="dfc/dfcPhysObj.h" open="0" top="0" tabpos="3">
-		<Cursor position="1786" topLine="79" />
+	<File name="lib/linux/lib_linux.h" open="0" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="96" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="helper/XMLLoader.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="17492" topLine="673" />
+	<File name="dfc/dfcRPGEngineSpells.cpp" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="helper/XMLLoader.h" open="0" top="0" tabpos="0">
-		<Cursor position="1533" topLine="20" />
+	<File name="dfc/dfcContext.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/gp2x/libMngInput_gp2x.h" open="0" top="0" tabpos="0">
-		<Cursor position="620" topLine="3" />
+	<File name="dfc/dfc3DMaze.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/gp2x/libSystem_gp2x.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="582" topLine="21" />
+	<File name="lib/linux/libMngSound_linux.h" open="0" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="554" topLine="24" />
+		</Cursor>
 	</File>
-	<File name="lib/libMacros.h" open="1" top="0" tabpos="2">
-		<Cursor position="4438" topLine="191" />
+	<File name="lib/libMath.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/libMath.h" open="0" top="0" tabpos="0">
-		<Cursor position="512" topLine="3" />
+	<File name="dfc/dfcApp.cpp" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="358" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/libMngResIO.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2328" topLine="90" />
+	<File name="dfc/dfcRPGEngineEntities.cpp" open="0" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="700" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/libMngResIO.h" open="0" top="0" tabpos="0">
-		<Cursor position="1305" topLine="46" />
+	<File name="lib/linux/libMacros_linux.h" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1275" topLine="41" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMacros_linux.h" open="0" top="0" tabpos="0">
-		<Cursor position="0" topLine="42" />
+	<File name="dfc/dfcPhysObj.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMng3D_linux.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1845" topLine="95" />
+	<File name="dfc/dfcObj.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngGraphic_linux.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1473" topLine="62" />
+	<File name="lib/linux/libMngInput_linux.h" open="0" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1998" topLine="53" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngGraphic_linux.h" open="0" top="0" tabpos="0">
-		<Cursor position="3451" topLine="75" />
+	<File name="dfc/dfcSceneNodes.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1507" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngInput_linux.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="2597" topLine="95" />
+	<File name="dfc/dfcDictionary.cpp" open="0" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1208" topLine="38" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngInput_linux.h" open="0" top="0" tabpos="4">
-		<Cursor position="4550" topLine="160" />
+	<File name="lib/linux/libMngSound_linux.cpp" open="0" top="0" tabpos="34" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="872" topLine="26" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngSound_linux.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="788" topLine="14" />
+	<File name="dfc/dfcRPGEngine.cpp" open="0" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="350" topLine="79" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libMngSound_linux.h" open="0" top="0" tabpos="0">
-		<Cursor position="1300" topLine="29" />
+	<File name="lib/libMngResIO.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5925" topLine="241" />
+		</Cursor>
 	</File>
-	<File name="lib/linux/libSystem_linux.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1544" topLine="37" />
+	<File name="dfc/dfcSceneEngine.cpp" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="317" topLine="69" />
+		</Cursor>
+	</File>
+	<File name="lib/linux/libMng3D_linux.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="643" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="lib/linux/libMngGraphic_linux.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="611" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="lib/linux/libMngInput_linux.cpp" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1400" topLine="54" />
+		</Cursor>
+	</File>
+	<File name="lib/linux/libMng3D_linux.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2005" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="dfc/dfcSound.h" open="0" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="191" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

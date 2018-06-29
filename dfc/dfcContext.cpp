@@ -499,7 +499,7 @@ u32			i;
 	char	toto[128];
 	/////////////
 	//Debug Lines
-	if(m_nDbgLevel & DBG_COL_SYS){
+	if(m_nDbgLevel & DBG_COL_SYS){/*TODO printing this is not working anymore
 		pPixel= mngGraphic->LockSurface(mngGraphic->GetBB());
 		u32	halfWidth=	mngGraphic->GetWidth(mngGraphic->GetBB())/2;
 		u32	halfHeight=	mngGraphic->GetHeight(mngGraphic->GetBB())/2;
@@ -507,7 +507,7 @@ u32			i;
 		for(i= 0; i < m_cptLines; ++i)
 			mngGraphic->DrawLine_locked(pPixel, s32(m_arLines[i].m_start[0] + halfWidth), s32(m_arLines[i].m_start[1] + halfHeight), s32(m_arLines[i].m_end[0] + halfWidth), s32(m_arLines[i].m_end[1] + halfHeight),  0x00FF0000);
 
-		mngGraphic->UnLockSurface(mngGraphic->GetBB(), pPixel);
+		mngGraphic->UnLockSurface(mngGraphic->GetBB(), pPixel);*/
 	}
 
 	///////////
