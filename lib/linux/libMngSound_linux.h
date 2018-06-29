@@ -1,9 +1,9 @@
 #ifndef _SOUND_WIN32_H
 #define _SOUND_WIN32_H
 
-//#include <vorbis/codec.h>
 #include <SDL_audio.h>
 #include <SDL_mixer.h>
+
 
 class CMusic;
 class CMngSound
