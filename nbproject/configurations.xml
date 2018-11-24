@@ -126,6 +126,7 @@
             <pElem>src/lib/linux</pElem>
             <pElem>/usr/include/SDL2</pElem>
           </incDir>
+          <commandLine>`sdl2-config --cflags`</commandLine>
           <preprocessorList>
             <Elem>_DEBUG</Elem>
             <Elem>_LINUX,</Elem>
