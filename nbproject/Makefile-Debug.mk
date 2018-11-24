@@ -74,8 +74,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=`sdl2-config --cflags` 
-CXXFLAGS=`sdl2-config --cflags` 
+CCFLAGS=`sdl2-config --cflags` -fexceptions 
+CXXFLAGS=`sdl2-config --cflags` -fexceptions 
 
 # Fortran Compiler Flags
 FFLAGS=
