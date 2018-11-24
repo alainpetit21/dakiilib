@@ -353,8 +353,9 @@ CLabelGradual::Manage(u32 p_nTimeTick)
 	if(int(m_nCpt) > m_nLen)
 		m_nCpt= float(m_nLen);
 	else
-		if((m_textWhole[int(m_nCpt-1)] == '\\') && (m_textWhole[int(m_nCpt)] == 'n'))
-			m_nCpt++;
+		if(int(m_nCpt) > 0)
+			if((m_textWhole[int(m_nCpt-1)] == '\\') && (m_textWhole[int(m_nCpt)] == 'n'))
+				m_nCpt++;
 
 	memcpy(&m_text[0], &m_textWhole[0], sizeof(char)*int(m_nCpt));
 	CLabel::Manage(p_nTimeTick);

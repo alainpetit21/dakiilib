@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="dfc" displayName="dfc" projectFiles="true">
+        <itemPath>src/dfc/dfc.h</itemPath>
+        <itemPath>src/dfc/dfc3DEntity.cpp</itemPath>
+        <itemPath>src/dfc/dfc3DEntity.h</itemPath>
+        <itemPath>src/dfc/dfc3DMaze.cpp</itemPath>
+        <itemPath>src/dfc/dfc3DMaze.h</itemPath>
+        <itemPath>src/dfc/dfc3DSprite.cpp</itemPath>
+        <itemPath>src/dfc/dfc3DSprite.h</itemPath>
+        <itemPath>src/dfc/dfcApp.cpp</itemPath>
+        <itemPath>src/dfc/dfcApp.h</itemPath>
+        <itemPath>src/dfc/dfcBackground.cpp</itemPath>
+        <itemPath>src/dfc/dfcBackground.h</itemPath>
+        <itemPath>src/dfc/dfcButton.cpp</itemPath>
+        <itemPath>src/dfc/dfcButton.h</itemPath>
+        <itemPath>src/dfc/dfcCamera.cpp</itemPath>
+        <itemPath>src/dfc/dfcCamera.h</itemPath>
+        <itemPath>src/dfc/dfcContext.cpp</itemPath>
+        <itemPath>src/dfc/dfcContext.h</itemPath>
+        <itemPath>src/dfc/dfcDictionary.cpp</itemPath>
+        <itemPath>src/dfc/dfcDictionary.h</itemPath>
+        <itemPath>src/dfc/dfcEntity.cpp</itemPath>
+        <itemPath>src/dfc/dfcEntity.h</itemPath>
+        <itemPath>src/dfc/dfcFont.cpp</itemPath>
+        <itemPath>src/dfc/dfcFont.h</itemPath>
+        <itemPath>src/dfc/dfcLabel.cpp</itemPath>
+        <itemPath>src/dfc/dfcLabel.h</itemPath>
+        <itemPath>src/dfc/dfcMusic.cpp</itemPath>
+        <itemPath>src/dfc/dfcMusic.h</itemPath>
+        <itemPath>src/dfc/dfcObj.cpp</itemPath>
+        <itemPath>src/dfc/dfcObj.h</itemPath>
+        <itemPath>src/dfc/dfcPhysObj.cpp</itemPath>
+        <itemPath>src/dfc/dfcPhysObj.h</itemPath>
+        <itemPath>src/dfc/dfcRPGEngine.cpp</itemPath>
+        <itemPath>src/dfc/dfcRPGEngine.h</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineEntities.cpp</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineEntities.h</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineItems.cpp</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineItems.h</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineSpells.cpp</itemPath>
+        <itemPath>src/dfc/dfcRPGEngineSpells.h</itemPath>
+        <itemPath>src/dfc/dfcSceneEngine.cpp</itemPath>
+        <itemPath>src/dfc/dfcSceneEngine.h</itemPath>
+        <itemPath>src/dfc/dfcSceneNodes.cpp</itemPath>
+        <itemPath>src/dfc/dfcSceneNodes.h</itemPath>
+        <itemPath>src/dfc/dfcSound.cpp</itemPath>
+        <itemPath>src/dfc/dfcSound.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="helper" displayName="helper" projectFiles="true">
+        <itemPath>src/helper/DString.cpp</itemPath>
+        <itemPath>src/helper/DString.h</itemPath>
+        <itemPath>src/helper/XMLLoader.cpp</itemPath>
+        <itemPath>src/helper/XMLLoader.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="lib" displayName="lib" projectFiles="true">
+        <logicalFolder name="linux" displayName="linux" projectFiles="true">
+          <itemPath>src/lib/linux/libMacros_linux.h</itemPath>
+          <itemPath>src/lib/linux/libMng3D_linux.cpp</itemPath>
+          <itemPath>src/lib/linux/libMng3D_linux.h</itemPath>
+          <itemPath>src/lib/linux/libMngGraphic_linux.cpp</itemPath>
+          <itemPath>src/lib/linux/libMngGraphic_linux.h</itemPath>
+          <itemPath>src/lib/linux/libMngInput_linux.cpp</itemPath>
+          <itemPath>src/lib/linux/libMngInput_linux.h</itemPath>
+          <itemPath>src/lib/linux/libMngSound_linux.cpp</itemPath>
+          <itemPath>src/lib/linux/libMngSound_linux.h</itemPath>
+          <itemPath>src/lib/linux/libSystem_linux.cpp</itemPath>
+          <itemPath>src/lib/linux/libTypes_linux.h</itemPath>
+          <itemPath>src/lib/linux/lib_linux.h</itemPath>
+        </logicalFolder>
+        <itemPath>src/lib/lib.h</itemPath>
+        <itemPath>src/lib/libMacros.h</itemPath>
+        <itemPath>src/lib/libMath.cpp</itemPath>
+        <itemPath>src/lib/libMath.h</itemPath>
+        <itemPath>src/lib/libMng3D.h</itemPath>
+        <itemPath>src/lib/libMngGraphic.h</itemPath>
+        <itemPath>src/lib/libMngIO.cpp</itemPath>
+        <itemPath>src/lib/libMngIO.h</itemPath>
+        <itemPath>src/lib/libMngInput.h</itemPath>
+        <itemPath>src/lib/libMngResIO.cpp</itemPath>
+        <itemPath>src/lib/libMngResIO.h</itemPath>
+        <itemPath>src/lib/libMngSound.h</itemPath>
+        <itemPath>src/lib/libTypes.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>src/newClass.cpp</itemPath>
+    <itemPath>src/newClass.h</itemPath>
+    <itemPath>src/obj</itemPath>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>src/dfc</pElem>
+            <pElem>src/helper</pElem>
+            <pElem>src/lib</pElem>
+            <pElem>src/lib/linux</pElem>
+            <pElem>/usr/include/SDL2</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>_DEBUG</Elem>
+            <Elem>_LINUX,</Elem>
+          </preprocessorList>
+        </ccTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="src/dfc/dfc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DEntity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DEntity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DMaze.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DMaze.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DSprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DSprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcBackground.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcBackground.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcCamera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcCamera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcContext.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcEntity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcEntity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcFont.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcFont.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcLabel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcLabel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcMusic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcMusic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcPhysObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcPhysObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineEntities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineEntities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineItems.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineItems.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineSpells.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineSpells.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneNodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSound.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSound.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/helper/DString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/helper/DString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/helper/XMLLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/helper/XMLLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/lib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMacros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMath.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMath.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMng3D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngGraphic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngIO.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMngIO.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngInput.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngResIO.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMngResIO.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngSound.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMacros_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMng3D_linux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMng3D_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngGraphic_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngGraphic_linux.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngInput_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngInput_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngSound_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngSound_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libSystem_linux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libTypes_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/lib_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/newClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/newClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/obj" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="3">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <archiverTool>
+        </archiverTool>
+      </compileType>
+      <item path="src/dfc/dfc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DEntity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DEntity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DMaze.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DMaze.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DSprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfc3DSprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcApp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcApp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcBackground.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcBackground.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcCamera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcCamera.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcContext.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcDictionary.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcDictionary.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcEntity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcEntity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcFont.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcFont.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcLabel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcLabel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcMusic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcMusic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcPhysObj.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcPhysObj.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineEntities.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineEntities.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineItems.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineItems.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineSpells.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcRPGEngineSpells.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneEngine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSceneNodes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSound.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/dfc/dfcSound.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/helper/DString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/helper/DString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/helper/XMLLoader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/helper/XMLLoader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/lib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMacros.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMath.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMath.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMng3D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngGraphic.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngIO.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMngIO.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngInput.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngResIO.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/libMngResIO.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libMngSound.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/libTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMacros_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMng3D_linux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMng3D_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngGraphic_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngGraphic_linux.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngInput_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngInput_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngSound_linux.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lib/linux/libMngSound_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libSystem_linux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lib/linux/libTypes_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lib/linux/lib_linux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/newClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/newClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/obj" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
